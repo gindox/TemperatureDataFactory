@@ -5,13 +5,13 @@ using System;
 using Microsoft.Azure.Devices.Shared;
 using Newtonsoft.Json;
 
-namespace SimulatedTemperatureSensorModule
+namespace TemperatureDataFactory
 {
     public class DesiredProperties
     {
         private bool _sendData = true;
         // in milliseconds
-        private int _sendInterval = 5000;
+        private int _sendInterval = 30000;
         private int _instanceCount = 1;
 
         public void UpdateDesiredProperties(TwinCollection twinCollection)

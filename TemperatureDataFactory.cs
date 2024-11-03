@@ -3,7 +3,7 @@
 
 using System;
 
-namespace SimulatedTemperatureSensorModule
+namespace TemperatureDataFactory
 {
     public class TemperatureDataFactory
     {
@@ -25,6 +25,7 @@ namespace SimulatedTemperatureSensorModule
             var machinePressure = policy.CalculatePressure(TemperatureDataFactory.CurrentMachineTemperature);
             var ambientTemperature = policy.CalculateAmbientTemperature();
             var ambientHumidity = policy.CalculateHumidity();
+            var machineCode = "machineCode";
 
             var messageBody = new MessageBody
             {
@@ -39,7 +40,8 @@ namespace SimulatedTemperatureSensorModule
                     Temperature = ambientTemperature,
                     Humidity = ambientHumidity
                 },
-                TimeCreated = string.Format("{0:O}", DateTime.Now)
+                TimeCreated = string.Format("{0:O}", DateTime.Now),
+                MachineCode = machineCode
             };
 
             return messageBody;

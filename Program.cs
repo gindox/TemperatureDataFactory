@@ -12,7 +12,7 @@ using Microsoft.Azure.Devices.Client.Transport.Mqtt;
 using Microsoft.Azure.Devices.Shared;
 using Newtonsoft.Json;
 
-namespace SimulatedTemperatureSensorModule
+namespace TemperatureDataFactory
 {
     class Program
     {

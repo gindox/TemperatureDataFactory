@@ -3,7 +3,7 @@
 
 using System;
 
-namespace SimulatedTemperatureSensorModule
+namespace TemperatureDataFactory
 {
     public class DataGenerationPolicy
     {

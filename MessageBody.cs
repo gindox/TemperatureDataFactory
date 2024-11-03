@@ -3,7 +3,7 @@
 
 using Newtonsoft.Json;
 
-namespace SimulatedTemperatureSensorModule
+namespace TemperatureDataFactory
 {
     public class MessageBody
     {
@@ -16,6 +16,8 @@ namespace SimulatedTemperatureSensorModule
         public Ambient Ambient { get; set; }
         [JsonProperty("timeCreated")]
         public string TimeCreated { get; set; }
+        [JsonProperty("machineCode")]
+        public string MachineCode {get; set; }
     }
 
     [JsonObject("machine")]
